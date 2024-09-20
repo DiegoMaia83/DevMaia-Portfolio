@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=SUSE:wght@100..800&display=swap');
+
+:root {
+  --dm-color-blue-dark: #031326;
+  --dm-color-blue: #075473;
+  --dm-color-blue-light: #0A9EBF;
+  --dm-color-gold: #EDF257;
+  --dm-color-light: #F2F2F2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box; /* Garante que o padding e border sejam incluídos nas dimensões dos elementos */
+  font-family: "SUSE", sans-serif;
+}
+
+body {
+  background-color: var(--dm-color-light);
+}
+
+.title-session {
+  display: flex;
+  gap: 20px;
+}
+
+.title-session h4 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+}
+
+.title-session hr {
+  margin-bottom: 40px;
+  width: 50%;
+}
+
+.dm-btn {
+  border-radius: 50px;
+  margin: 0;
+  color: #fff;
+  padding: 2px 30px;
+  text-transform: uppercase;
+}
+
+.dm-btn-primary {
+  border: 1px solid var(--dm-color-blue-dark);
+  background-color: var(--dm-color-blue-dark);
+  color: var(--dm-color-light);
+  transition: 0.5s;
+}
+
+.dm-btn-primary:hover {
+  border: 1px solid var(--dm-color-light);
+  background-color: var(--dm-color-blue-light);
+  color: var(--dm-color-light);
+}

@@ -1,0 +1,128 @@
+
+.dm-menu-bg {
+    background-color: transparent;
+    /*background-color: var(--dm-color-blue);*/
+}
+
+.dm-menu {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.dm-menu-session {
+    display: flex;
+    gap: 10px;
+}
+
+.dm-menu-session a {
+    background-color: var(--dm-color-blue);
+    font-size: 14px;
+    border-radius: 50px;
+    margin: 0;
+    color: #fff;
+    padding: 2px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.dm-menu-social {
+    display: flex;
+    gap: 10px;
+}
+
+.dm-menu-social a {
+    background-color: var(--dm-color-blue);
+    font-size: 14px;
+    border-radius: 50px;
+    margin: 0;
+    color: #fff;
+    padding: 2px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.dm-menu-social div {
+    color: #ffffff;
+    padding: 0px 15px;
+}
+
+.dm-menu-bar {
+    display: none;
+}
+
+.dm-menu-bar a {
+    background-color: var(--dm-color-blue);
+    font-size: 14px;
+    border-radius: 50px;
+    margin: 0;
+    color: #fff;
+    padding: 2px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#dm-menu-bar-options {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--dm-color-blue);
+    width: calc(100vw - 20px);
+    border-radius: 10px;
+    margin: 10px;
+    position: absolute;
+    top: 40px;
+    
+    /* Adicionando animação */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Classe adicionada dinamicamente para controla a exibição do menu */
+#dm-menu-bar-options.open {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#dm-menu-bar-options a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#dm-menu-bar-options hr {
+    border-color: #fff;
+    margin: 10px;
+}
+
+@media (max-width: 992px) {
+    .dm-menu {
+        justify-content: center;
+    }
+
+    .dm-menu-social {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .dm-menu {
+        justify-content: space-between;
+    }
+
+    .dm-menu-session {
+        display: none;
+    }
+
+    .dm-menu-bar {
+        display: block;
+    }
+    
+}

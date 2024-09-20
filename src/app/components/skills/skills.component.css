@@ -1,0 +1,29 @@
+
+.dm-skills-bg {
+    background-color: var(--dm-color-blue-dark);
+}
+
+.dm-skills {
+    color: #ffffff;
+    padding: 70px 10px;
+}
+
+.dm-skills h4 {
+    color: #ffffff;
+}
+
+.dm-skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.dm-skill-tag {
+    background-color: var(--dm-color-blue-light);
+    border-radius: 50px;
+    font-size: 12px;
+    margin: 0;
+    color: #fff;
+    padding: 2px 10px;
+    text-transform: uppercase;
+}

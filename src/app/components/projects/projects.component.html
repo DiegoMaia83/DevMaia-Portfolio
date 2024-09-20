@@ -1,0 +1,49 @@
+<div class="container dm-projects">
+
+    <div style="display: flex; gap: 5px;">
+        <div class="dm-button-filter" (click)="filterProjects('Javascript')">Javascript</div>
+        <div class="dm-button-filter" (click)="filterProjects('MySql')">MySql</div>
+        <div class="dm-button-filter" (click)="filterProjects('C#')">C#</div>
+    </div>
+
+    <div class="row">
+        
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" style="padding: 10px;" *ngFor="let project of filteredProjects">
+
+            <div class="dm-card">
+
+                <div class="dm-card-header">
+                    <img src="/assets/images/img1.JPG" alt="Logo" class="img-fluid">
+                </div>
+    
+                <div class="dm-card-body">
+    
+                    <div style="height: 80px;">
+                        <div class="dm-tags">
+                            <span *ngFor="let category of project.categories" class="dm-tag" [style.background-color]="category[1]">{{ category[0] }}</span>
+                        </div>                    
+                    </div>
+
+                    <div style="height: 80px; margin: 10px 0px;">
+                        <div class="dm-project-description">
+                            {{ project.description }}
+                        </div>
+                    </div>
+    
+                    <div class="dm-project-links">
+                        <div class="dm-project-link" *ngFor="let link of project.links">
+                            <a (click)="abrirLink(link[1])">
+                              <i [class]="getIcon(link[0])"></i> {{ link[0] }}
+                            </a>
+                          </div>                      
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

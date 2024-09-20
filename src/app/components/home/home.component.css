@@ -1,0 +1,25 @@
+
+.dm-home-bg {
+    /*background-color: rgb(53, 54, 54);*/
+    height: 400px;
+}
+
+.container {
+    height: 100%;
+}
+
+.dm-home-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dm-home-content-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}

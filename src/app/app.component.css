@@ -1,0 +1,10 @@
+
+.content {
+        /* Define a imagem de fundo para o componente root */
+        background-image: url('/assets/images/bg2.jpg');
+        background-size: cover; /* Faz a imagem cobrir todo o espaço */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Evita a repetição da imagem */
+        height: 70vh; /* Garante que o componente ocupe a altura total da viewport */
+        width: 100%;
+}

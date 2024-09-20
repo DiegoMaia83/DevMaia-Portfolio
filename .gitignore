@@ -1,0 +1,67 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Diretório do sistema
+.DS_Store
+Thumbs.db
+
+# Diretórios de dependências
+/node_modules
+/jspm_packages
+
+# Diretórios de build
+/dist
+/out-tsc
+/build
+/.angular/cache
+
+# Diretórios temporários do editor
+/tmp
+/temp
+
+# Produção
+/src/environments/environment.prod.ts
+
+# Cache do Angular CLI
+.angular/cache
+
+# Arquivos de build e relatórios de cobertura de testes
+coverage
+/lcov-report
+
+# Test helpers
+testem.log
+testem-*.log
+/karma-results
+
+# Arquivos de configuração locais
+/.idea
+/.vscode
+
+# Ambiente de desenvolvimento local
+*.env
+.env.*
+!.env.example
+
+# Diretório de cache do npm e yarn
+.npm
+.yarn
+.yarnrc.yml
+
+# Arquivos de lock
+package-lock.json
+yarn.lock
+
+# Configuração do TypeScript
+/tsconfig.json
+/tsconfig.*.json
+
+# Artefatos de build do TypeScript
+*.tsbuildinfo
+
+# Arquivos criados pelo Angular durante a compilação
+/.angular/cache
