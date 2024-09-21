@@ -13,7 +13,8 @@ export class ProjectsComponent {
   projects = [
     {
       title: 'SIGV',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra tempor imperdiet.',
+      description: 'Sistema WEB de cadastro e controle de veículos, desenvolvido em .NET Framework com MVC.',
+      thumb: 'sigv.jpg',
       links: [
         ['GitHub', 'https://github.com/DiegoMaia83/Sigv'],
         ['Site', 'http://sigv.devmaia.com.br']
@@ -21,7 +22,6 @@ export class ProjectsComponent {
       categories: [
         [ '.NET Framework', this.getColor('.NET Framework') ],
         [ 'C#', this.getColor('C#') ],
-        [ 'MySql', this.getColor('MySql') ],
         [ 'Bootstrap', this.getColor('Bootstrap') ],
         [ 'CSS', this.getColor('CSS') ],
         [ 'Javascript', this.getColor('Javascript') ],
@@ -29,15 +29,18 @@ export class ProjectsComponent {
       ]
     },
     {
-      title: 'Sistema de condomínio',
-      description: 'Sistema de condomínio',
+      title: 'SIGV - Api',
+      description: 'API desenvolvida em .NET Framework com MySQL, projetada para atender a versão web a versão mobile do sistema.',
+      thumb: 'sigv-api.jpg',
       links: [
         ['GitHub', 'https://github.com/DiegoMaia83/Sigv'],
-        ['Site', 'http://sigv.devmaia.com.br']
+        ['Api', 'http://api-sigv.devmaia.com.br/swagger']
       ],
       categories: [
         [ '.NET Framework', this.getColor('.NET Framework') ],
-        [ 'C#', this.getColor('C#') ]
+        [ 'C#', this.getColor('C#') ],
+        [ 'MySql', this.getColor('MySql') ],
+        [ 'Swagger', this.getColor('Swagger') ]
       ]
     }
       
@@ -68,6 +71,8 @@ export class ProjectsComponent {
         return 'fab fa-github';
       case 'site':
         return 'fas fa-globe';
+      case 'api':
+        return 'fas fa-sitemap'
       default:
         return 'fas fa-link'; 
     }

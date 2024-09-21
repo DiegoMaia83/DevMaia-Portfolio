@@ -1,7 +1,7 @@
 
 .dm-home-bg {
     /*background-color: rgb(53, 54, 54);*/
-    height: 400px;
+    height: 60vh;
 }
 
 .container {
@@ -17,9 +17,40 @@
 
 .dm-home-content-div {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;    
     height: 100%;
-    width: 100%;
+    padding-top: 100px;
+}
+
+.dm-home-content-div-center {
+    flex: 4;
+}
+
+.dm-home-content-div-design {
+    text-align: left;
+    flex: 3;
+}
+
+.dm-home-content-div-code {
+    text-align: right;
+    flex: 3;
+}
+
+
+@media (max-width: 768px) {
+
+    .dm-home-content-div-center {
+        flex: 6;
+    }
+
+    .dm-home-content-div-design div {
+        display: none;
+        flex: 2;
+    }
+
+    .dm-home-content-div-code div {
+        display: none;
+        flex: 2;
+    }
+    
 }

@@ -1,5 +1,11 @@
 <div class="container dm-projects">
 
+    <div class="title-session">
+        <hr/>
+        <h4>Projetos</h4>
+        <hr/>
+    </div>
+
     <div style="display: flex; gap: 5px;">
         <div class="dm-button-filter" (click)="filterProjects('Javascript')">Javascript</div>
         <div class="dm-button-filter" (click)="filterProjects('MySql')">MySql</div>
@@ -13,7 +19,7 @@
             <div class="dm-card">
 
                 <div class="dm-card-header">
-                    <img src="/assets/images/img1.JPG" alt="Logo" class="img-fluid">
+                    <img src="/assets/images/{{ project.thumb }}" alt="Logo" class="img-fluid">
                 </div>
     
                 <div class="dm-card-body">
