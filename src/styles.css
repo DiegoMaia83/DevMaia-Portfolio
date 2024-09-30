@@ -6,6 +6,9 @@
   --dm-color-blue-light: #0A9EBF;
   --dm-color-gold: #EDF257;
   --dm-color-light: #F2F2F2;
+  --dm-color-gray-light: #CCCCCC;
+  --dm-color-gray: #888888;
+  --dm-color-gray-dark: #333333;
 }
 
 * {
@@ -55,5 +58,11 @@ body {
 .dm-btn-primary:hover {
   border: 1px solid var(--dm-color-light);
   background-color: var(--dm-color-blue-light);
+  color: var(--dm-color-light);
+}
+
+.dm-btn-primary:disabled {
+  border: 1px solid var(--dm-color-gray);
+  background-color: var(--dm-color-gray);
   color: var(--dm-color-light);
 }

@@ -7,11 +7,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, HomeComponent, ProjectsComponent, SkillsComponent, AboutComponent, ContactComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, HomeComponent, ProjectsComponent, SkillsComponent, AboutComponent, ContactComponent, FooterComponent, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -12,6 +12,20 @@ export class ProjectsComponent {
 
   projects = [
     {
+      title: 'E-mail - Api',
+      description: 'API de e-mail desenvolvida em .NET Core.',
+      thumb: 'sigv.jpg',
+      links: [
+        ['GitHub', 'https://github.com/DiegoMaia83/ApiMail'],
+        ['Api', 'http://api-mail.devmaia.com.br/swagger/index.html']
+      ],
+      categories: [
+        [ '.NET Core', this.getColor('.NET Core') ],
+        [ 'C#', this.getColor('C#') ],
+        [ 'Swagger', this.getColor('Swagger') ]
+      ]
+    },
+    {
       title: 'SIGV',
       description: 'Sistema WEB de cadastro e controle de veículos, desenvolvido em .NET Framework com MVC.',
       thumb: 'sigv.jpg',

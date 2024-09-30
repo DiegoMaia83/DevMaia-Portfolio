@@ -1,4 +1,4 @@
-<div class="container dm-contact">
+<div class="container dm-contact" [formGroup]="contactForm">
 
     <div class="title-session">
         <hr/>
@@ -13,22 +13,47 @@
             <div class="row">
 
                 <div class="col-sm-12 col-md-6 mb-3">
-                    <label>Nome</label>
-                    <input class="form-control" />
+                    <label for="name">Nome</label>
+                    <input id="name" class="form-control" formControlName="name" />
+
+                    <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
+                        O nome é obrigatório.
+                    </div>
                 </div>
 
                 <div class="col-sm-12 col-md-6 mb-3">
-                    <label>E-mail</label>
-                    <input class="form-control" />
+                    <label for="address">E-mail</label>
+                    <input id="address" class="form-control" formControlName="address" />
+
+                    <div *ngIf="contactForm.get('address')?.invalid && contactForm.get('address')?.touched" class="text-danger">
+                        Por favor, insira um e-mail válido.
+                    </div>
+                </div>
+
+                <div class="col-sm-12 mb-3">
+                    <label for="subject">Assunto</label>
+                    <input id="subject" class="form-control" formControlName="subject" />
+
+                    <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched" class="text-danger">
+                        O assunto é obrigatório.
+                    </div>
                 </div>
 
                 <div class="col-12 mb-3">
-                    <label>Mensagem</label>
-                    <textarea class="form-control"></textarea>
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" class="form-control" formControlName="message"></textarea>
+
+                    <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+                        A mensagem é obrigatória.
+                    </div>
                 </div>
 
                 <div class="col-2">
-                    <button class="dm-btn dm-btn-primary">Enviar</button>
+                    <button class="dm-btn dm-btn-primary" (click)="enviarContato()" *ngIf="!isLoading">Enviar</button>
+                    <button class="dm-btn dm-btn-primary" [disabled]="true" *ngIf="isLoading">
+                        <div class="spinner-border spinner-border-sm text-light">
+                        </div>
+                    </button>
                 </div>
 
             </div>
