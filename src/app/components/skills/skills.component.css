@@ -14,8 +14,14 @@
 
 .dm-skill-tags {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction:column;
     gap: 5px;
+}
+
+.dm-skill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .dm-skill-tag {

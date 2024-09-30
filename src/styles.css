@@ -66,3 +66,8 @@ body {
   background-color: var(--dm-color-gray);
   color: var(--dm-color-light);
 }
+
+.dm-star {
+  font-size: 12px; 
+  color: var(--dm-color-blue-light);
+}

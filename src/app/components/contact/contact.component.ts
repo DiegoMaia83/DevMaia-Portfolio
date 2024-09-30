@@ -43,8 +43,6 @@ export class ContactComponent {
         message: this.contactForm.value.message
       };
 
-      console.log(mailContact)
-
       this.mailService.enviarContato(mailContact)
         .subscribe(
           (response: any) => {
