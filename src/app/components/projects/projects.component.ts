@@ -37,6 +37,7 @@ export class ProjectsComponent {
         [ '.NET Framework', this.getColor('.NET Framework') ],
         [ 'C#', this.getColor('C#') ],
         [ 'Bootstrap', this.getColor('Bootstrap') ],
+        [ 'HTML', this.getColor('HTML') ],
         [ 'CSS', this.getColor('CSS') ],
         [ 'Javascript', this.getColor('Javascript') ],
         [ 'Jquery', this.getColor('WEB') ]
