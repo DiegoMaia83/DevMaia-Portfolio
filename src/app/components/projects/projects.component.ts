@@ -23,6 +23,9 @@ export class ProjectsComponent {
         [ '.NET Core', this.getColor('.NET Core') ],
         [ 'C#', this.getColor('C#') ],
         [ 'Swagger', this.getColor('Swagger') ]
+      ],
+      filters: [
+         'API' 
       ]
     },
     {
@@ -41,6 +44,9 @@ export class ProjectsComponent {
         [ 'CSS', this.getColor('CSS') ],
         [ 'Javascript', this.getColor('Javascript') ],
         [ 'Jquery', this.getColor('WEB') ]
+      ],
+      filters: [
+         'Web'
       ]
     },
     {
@@ -56,6 +62,9 @@ export class ProjectsComponent {
         [ 'C#', this.getColor('C#') ],
         [ 'MySql', this.getColor('MySql') ],
         [ 'Swagger', this.getColor('Swagger') ]
+      ],
+      filters: [
+         'API' 
       ]
     }
       
@@ -95,9 +104,9 @@ export class ProjectsComponent {
   }
 
   // Função para filtrar os projetos com base na categoria selecionada
-  filterProjects(category: string) {
+  filterProjects(filter: string) {
     this.filteredProjects = this.projects.filter(project => 
-      project.categories.some(cat => cat[0] === category)
+      project.filters.some(f => f.toLowerCase() === filter.toLowerCase()) // Comparação insensível a maiúsculas/minúsculas
     );
   }
 
