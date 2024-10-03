@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Project, ProjectLink } from '../../models/project.model';
 
 @Component({
   selector: 'app-projects',
@@ -10,11 +11,16 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectsComponent {
 
-  projects = [
+  selectedProject = new Project();
+
+  projects = this.listProjects()
+
+  /*
+  projects2 = [
     {
+      id: 'email-api',
       title: 'E-mail - Api',
       description: 'API de e-mail desenvolvida em .NET Core.',
-      thumb: 'sigv.jpg',
       links: [
         ['GitHub', 'https://github.com/DiegoMaia83/ApiMail'],
         ['Api', 'http://api-mail.devmaia.com.br/swagger/index.html']
@@ -26,12 +32,13 @@ export class ProjectsComponent {
       ],
       filters: [
          'API' 
-      ]
+      ],
+      images: 2
     },
     {
+      id: 'sigv-web',
       title: 'SIGV',
       description: 'Sistema WEB de cadastro e controle de veículos, desenvolvido em .NET Framework com MVC.',
-      thumb: 'sigv.jpg',
       links: [
         ['GitHub', 'https://github.com/DiegoMaia83/Sigv'],
         ['Site', 'http://sigv.devmaia.com.br']
@@ -47,12 +54,13 @@ export class ProjectsComponent {
       ],
       filters: [
          'Web'
-      ]
+      ],
+      images: 6
     },
     {
+      id: 'sigv-api',
       title: 'SIGV - Api',
       description: 'API desenvolvida em .NET Framework com MySQL, projetada para atender a versão web a versão mobile do sistema.',
-      thumb: 'sigv-api.jpg',
       links: [
         ['GitHub', 'https://github.com/DiegoMaia83/Sigv'],
         ['Api', 'http://api-sigv.devmaia.com.br/swagger']
@@ -65,27 +73,64 @@ export class ProjectsComponent {
       ],
       filters: [
          'API' 
-      ]
-    }
-      
+      ],
+      images: 4
+    }      
   ];
+  */
 
   // Lista de projetos filtrados
-  filteredProjects = this.projects;
+  filteredProjects = this.projects;  
 
-  getColor(category: string) {
+  listProjects() {
 
-    let color;
+    let projects = new Array<Project>
 
-    switch (category) {
-      case 'Desenvolvimento':
-        color = '#ec0000'
-        break;
-      default:
-        color = '#ccc'
-    }
+    let pr1: Project = {
+      id: 'email-api',
+      title: 'E-mail - Api',
+      description: 'API de e-mail desenvolvida em .NET Core.',
+      links: [
+          new ProjectLink('GitHub', 'https://github.com/DiegoMaia83/ApiMail'),
+          new ProjectLink('Api', 'http://api-mail.devmaia.com.br/swagger/index.html')
+      ],
+      categories: ['.NET Core', 'C#', 'Swagger'],
+      filters: ['Api'],
+      images: 2
+    };
 
-    return color
+    let pr2: Project = {
+      id: 'sigv-web',
+      title: 'SIGV',
+      description: 'Sistema WEB de cadastro e controle de veículos, desenvolvido em .NET Framework com MVC.',
+      links: [
+          new ProjectLink('GitHub', 'https://github.com/DiegoMaia83/Sigv'),
+          new ProjectLink('Site', 'http://sigv.devmaia.com.br')
+      ],
+      categories: [ '.NET Framework', 'C#', 'Bootstrap', 'HTML', 'CSS', 'Javascript', 'Jquery' ],
+      filters: ['Web'],
+      images: 6
+    };
+
+    let pr3: Project = {
+      id: 'sigv-api',
+      title: 'SIGV - Api',
+      description: 'API desenvolvida em .NET Framework com MySQL, projetada para atender a versão web a versão mobile do sistema.',
+      links: [
+          new ProjectLink('GitHub', 'https://github.com/DiegoMaia83/Sigv'),
+          new ProjectLink('Api', 'http://api-sigv.devmaia.com.br/swagger')
+      ],
+      categories: [ '.NET Framework', 'C#', 'MySql', 'Swagger' ],
+      filters: ['Api'],
+      images: 4
+    };
+
+    projects.push(pr1)
+    projects.push(pr2)
+    projects.push(pr3)
+
+    return projects
+    
   }
 
   getIcon(linkTitle: string): string {
@@ -103,7 +148,6 @@ export class ProjectsComponent {
     
   }
 
-  // Função para filtrar os projetos com base na categoria selecionada
   filterProjects(filter: string) {
     this.filteredProjects = this.projects.filter(project => 
       project.filters.some(f => f.toLowerCase() === filter.toLowerCase()) // Comparação insensível a maiúsculas/minúsculas
@@ -112,6 +156,75 @@ export class ProjectsComponent {
 
   abrirLink(link:string) {
     window.open(link, '_blank');
+  }
+
+  getImageArray() {
+    return Array.from({ length: this.selectedProject.images }, (_, index) => ({ index }));
+  }
+
+  buildSliderImages(id: string) {
+
+    if (id == undefined) return ''
+
+    this.selectedProject = this.projects.find(p => p.id === id);
+    
+    let images = this.selectedProject.images
+    let imagesSlider = ''
+
+    for (var i = 1; i <= images; i++) {
+      imagesSlider += `<div class="carousel-item ${i == 1 ? "active" : ""}">`
+      imagesSlider += `<img class="d-block w-100" src="/assets/images/${id}/${String(i).padStart(2, '0')}.jpg">`
+      imagesSlider += `</div>`
+    }
+
+    return imagesSlider;  
+
+  }
+
+  openProjectModal(id: string) {
+    this.selectedProject = this.projects.find(p => p.id === id);
+
+    
+    if (this.selectedProject) {
+      /*
+      let images = this.selectedProject.images
+      let imagesSlider = ''
+
+      for (var i = 1; i <= images; i++) {
+        imagesSlider += `<div class="carousel-item ${i == 1 ? "active" : ""}">`
+        imagesSlider += `<img class="d-block w-100" src="/assets/images/${id}/${String(i).padStart(2, '0')}.jpg">`
+        imagesSlider += `</div>`
+      }
+
+      document.querySelector('.carousel-inner').innerHTML = imagesSlider;  
+      
+      document.getElementById('skillTitle').textContent = this.selectedProject.title;
+      document.getElementById('skillDescription').textContent = this.selectedProject.description;
+
+      let links = this.selectedProject.links
+      let linksIcons = ''
+
+      linksIcons += '<div class="dm-project-links">'
+      linksIcons += '<div class="dm-project-link">'
+
+      links.forEach(link => {
+        console.log(link)
+        linksIcons += `<a href="">`
+        linksIcons += `<i class="${this.getIcon(link[0])}"> ${link[0]}`
+        linksIcons += `</a>`
+      })
+
+      linksIcons += '</div>'
+      linksIcons += '</div>'
+
+      console.log(linksIcons)
+
+
+      document.getElementById('skillLinks').innerHTML = linksIcons;
+*/
+      const modal = new (window as any).bootstrap.Modal(document.getElementById('skillModal'));
+      modal.show();
+    }
   }
 
 }
