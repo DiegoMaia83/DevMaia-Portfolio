@@ -125,9 +125,22 @@ export class ProjectsComponent {
       images: 4
     };
 
+    let pr4: Project = {
+      id: 'sigv-mobile',
+      title: 'SIGV - Mobile',
+      description: 'Aplicativo mobile desenvolvido para efetuar a coleta de fotos e apontamentos de opcionais e avarias dos veículos',
+      links: [
+          new ProjectLink('GitHub', 'https://github.com/DiegoMaia83/Sigv')
+      ],
+      categories: [ 'Xamarin', 'C#' ],
+      filters: ['Mobile'],
+      images: 5
+    };
+
     projects.push(pr1)
     projects.push(pr2)
     projects.push(pr3)
+    projects.push(pr4)
 
     return projects
     
