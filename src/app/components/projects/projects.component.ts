@@ -186,7 +186,7 @@ export class ProjectsComponent {
 
     for (var i = 1; i <= images; i++) {
       imagesSlider += `<div class="carousel-item ${i == 1 ? "active" : ""}">`
-      imagesSlider += `<img class="d-block w-100" src="/assets/images/${id}/${String(i).padStart(2, '0')}.jpg">`
+      imagesSlider += `<img class="d-block w-100" src="/assets/images/${id}/${String(i).padStart(2, '0')}.jpg" style="max-height: 540px; object-fit: cover;">`
       imagesSlider += `</div>`
     }
 
