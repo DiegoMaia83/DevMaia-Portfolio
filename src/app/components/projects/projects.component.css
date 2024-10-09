@@ -77,6 +77,25 @@
     cursor: pointer;
 }
 
+.dm-button-info {
+    color: var(--dm-color-blue-dark);
+    border-color: var(--dm-color-blue-dark);
+    border-radius: 50px;
+    font-size: 12px;
+    margin: 15px 0px 0px 0px;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.dm-button-info:hover {
+    background-color: var(--dm-color-blue);;
+    color: #fff;
+    border-color: var(--dm-color-blue-dark);
+}
+
 .modal-footer {
     display: flex;
     justify-content: space-between;
