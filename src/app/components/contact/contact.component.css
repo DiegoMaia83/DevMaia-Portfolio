@@ -2,3 +2,16 @@
 .dm-contact {
     padding: 70px 10px;
 }
+
+.dm-contact-redes-sociais div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.dm-contact-redes-sociais i {
+    font-size: 1.5rem;
+    color: #666;
+}
+

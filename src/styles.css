@@ -71,3 +71,15 @@ body {
   font-size: 12px; 
   color: var(--dm-color-blue-light);
 }
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .show-mobile {
+      display: block;
+  }
+
+}
