@@ -1,0 +1,15 @@
+.dm-about {
+    padding: 50px 10px 10px 10px;
+}
+
+.dm-about-content {
+    display: flex;
+}
+
+.dm-about-descricao {
+    padding: 10px;
+    font-style: italic;
+    text-align: center;
+    padding: 0px 50px;
+    color: #666;
+}
