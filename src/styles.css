@@ -61,6 +61,7 @@ body {
   border: 1px solid var(--dm-color-light);
   background-color: var(--dm-color-blue-light);
   color: var(--dm-color-light);
+  text-decoration: none;
 }
 
 .dm-btn-primary:disabled {
