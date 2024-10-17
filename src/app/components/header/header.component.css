@@ -73,6 +73,7 @@
     margin: 10px;
     position: absolute;
     top: 40px;
+    z-index: 99;
     
     /* Adicionando animação */
     max-height: 0;
@@ -82,7 +83,7 @@
     transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
-/* Classe adicionada dinamicamente para controla a exibição do menu */
+/* Classe adicionada dinamicamente para controlar a exibição do menu */
 #dm-menu-bar-options.open {
     max-height: 500px;
     opacity: 1;
@@ -93,6 +94,7 @@
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 0px 10px;
 }
 
 #dm-menu-bar-options hr {

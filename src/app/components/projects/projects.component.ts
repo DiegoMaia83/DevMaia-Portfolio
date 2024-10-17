@@ -128,7 +128,7 @@ export class ProjectsComponent {
     let pr4: Project = {
       id: 'sigv-mobile',
       title: 'SIGV - Mobile',
-      description: 'Aplicativo mobile desenvolvido para efetuar a coleta de fotos e apontamentos de opcionais e avarias dos veículos',
+      description: 'Aplicativo mobile desenvolvido para a coleta de fotos e apontamentos de opcionais e avarias dos veículos',
       links: [
           new ProjectLink('GitHub', 'https://github.com/DiegoMaia83/Sigv')
       ],

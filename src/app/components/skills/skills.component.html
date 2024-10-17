@@ -15,7 +15,6 @@
                 <div class="dm-skill-tags">
                     <div class="dm-skill" *ngFor="let skill of skillsBackEnd">
                         <div class="dm-skill-tag">{{skill[0]}}</div>
-                        <div class="dm-skill-star" [innerHTML]="buildStarsSkills(skill[1])"></div>
                     </div>
                 </div>             
             </div>
@@ -25,7 +24,6 @@
                 <div class="dm-skill-tags">
                     <div class="dm-skill" *ngFor="let skill of skillsFrontEnd">
                         <div class="dm-skill-tag">{{skill[0]}}</div>
-                        <div class="dm-skill-star" [innerHTML]="buildStarsSkills(skill[1])"></div>
                     </div>
                 </div>             
             </div>            
@@ -41,7 +39,6 @@
                             <div class="dm-skill-tags">
                                 <div class="dm-skill" *ngFor="let skill of skillsBancoDeDados">
                                     <div class="dm-skill-tag">{{skill[0]}}</div>
-                                    <div class="dm-skill-star" [innerHTML]="buildStarsSkills(skill[1])"></div>
                                 </div>
                             </div>  
                         </div>
@@ -50,8 +47,7 @@
                             <h6>Serviços e Cloud</h6>
                             <div class="dm-skill-tags">
                                 <div class="dm-skill" *ngFor="let skill of skillsServicos">
-                                    <div class="dm-skill-tag">{{skill[0]}}</div>
-                                    <div class="dm-skill-star" [innerHTML]="buildStarsSkills(skill[1])"></div>
+                                    <div class="dm-skill-tag">{{skill[0]}}</div>                                    
                                 </div>
                             </div>
                         </div>
@@ -67,7 +63,6 @@
                 <div class="dm-skill-tags">
                     <div class="dm-skill" *ngFor="let skill of skillsDesign">
                         <div class="dm-skill-tag">{{skill[0]}}</div>
-                        <div class="dm-skill-star" [innerHTML]="buildStarsSkills(skill[1])"></div>
                     </div>
                 </div>             
             </div>
