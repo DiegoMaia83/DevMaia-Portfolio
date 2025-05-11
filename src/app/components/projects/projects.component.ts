@@ -92,7 +92,7 @@ export class ProjectsComponent {
       description: 'API de e-mail desenvolvida em .NET Core.',
       links: [
           new ProjectLink('GitHub', 'https://github.com/DiegoMaia83/ApiMail'),
-          new ProjectLink('Api', 'http://api-mail.devmaia.com.br/swagger/index.html')
+          new ProjectLink('Api', 'https://api-mail.devmaia.com.br/swagger/index.html')
       ],
       categories: ['.NET Core', 'C#', 'Swagger'],
       filters: ['Api'],
@@ -105,7 +105,7 @@ export class ProjectsComponent {
       description: 'Sistema WEB de cadastro e controle de veículos, desenvolvido em .NET Framework com MVC.',
       links: [
           new ProjectLink('GitHub', 'https://github.com/DiegoMaia83/Sigv'),
-          new ProjectLink('Site', 'http://sigv.devmaia.com.br')
+          new ProjectLink('Site', 'https://sigv.devmaia.com.br')
       ],
       categories: [ '.NET Framework', 'C#', 'Bootstrap', 'HTML', 'CSS', 'Javascript', 'Jquery' ],
       filters: ['Web'],
@@ -118,7 +118,7 @@ export class ProjectsComponent {
       description: 'API desenvolvida em .NET Framework com MySQL, projetada para atender a versão web a versão mobile do sistema.',
       links: [
           new ProjectLink('GitHub', 'https://github.com/DiegoMaia83/Sigv'),
-          new ProjectLink('Api', 'http://api-sigv.devmaia.com.br/swagger')
+          new ProjectLink('Api', 'https://api-sigv.devmaia.com.br/swagger')
       ],
       categories: [ '.NET Framework', 'C#', 'MySql', 'Swagger' ],
       filters: ['Api'],
