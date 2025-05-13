@@ -139,7 +139,7 @@ export class ProjectsComponent {
 
     let pr5: Project = {
       id: 'sis-condominio',
-      title: 'SIGV',
+      title: 'Sistema de Condomínio',
       description: 'Sistema gestão de condomínio, desenvolvido em C#, EntityFramework e MVC.',
       links: [
           new ProjectLink('GitHub', 'https://github.com/DiegoMaia83/SistemaCondominio'),
@@ -150,11 +150,25 @@ export class ProjectsComponent {
       images: 4
     };
 
+    let pr6: Project = {
+      id: 'glic-app',
+      title: 'GlicApp - Mobile',
+      description: 'Aplicativo mobile desenvolvido para o controle de glicemia utilizando Xamarin/MAUI',
+      links: [
+          new ProjectLink('GitHub', 'https://github.com/DiegoMaia83/AppControleGlicemia'),
+      ],
+      categories: [ 'Xamarin', 'C#' ],
+      filters: ['Mobile'],
+      images: 5
+    };
+
+
     projects.push(pr1)
     projects.push(pr2)
     projects.push(pr3)
     projects.push(pr4)
     projects.push(pr5)
+    projects.push(pr6)
 
     return projects
     
@@ -200,7 +214,7 @@ export class ProjectsComponent {
 
     for (var i = 1; i <= images; i++) {
       imagesSlider += `<div class="carousel-item ${i == 1 ? "active" : ""}">`
-      imagesSlider += `<img class="d-block w-100" src="/assets/images/${id}/${String(i).padStart(2, '0')}.jpg" style="max-height: 540px; object-fit: cover;">`
+      imagesSlider += `<img class="d-block w-100" src="/assets/images/${id}/${String(i).padStart(2, '0')}.jpg" style="height: 100%; object-fit: cover;">`
       imagesSlider += `</div>`
     }
 
