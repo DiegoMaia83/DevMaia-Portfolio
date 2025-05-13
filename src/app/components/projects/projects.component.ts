@@ -137,10 +137,24 @@ export class ProjectsComponent {
       images: 5
     };
 
+    let pr5: Project = {
+      id: 'sis-condominio',
+      title: 'SIGV',
+      description: 'Sistema gestão de condomínio, desenvolvido em C#, EntityFramework e MVC.',
+      links: [
+          new ProjectLink('GitHub', 'https://github.com/DiegoMaia83/SistemaCondominio'),
+          new ProjectLink('Site', 'https://sistemacondominio.devmaia.com.br')
+      ],
+      categories: [ '.NET Framework', 'C#', 'Bootstrap', 'HTML', 'CSS', 'Javascript', 'Jquery' ],
+      filters: ['Web'],
+      images: 4
+    };
+
     projects.push(pr1)
     projects.push(pr2)
     projects.push(pr3)
     projects.push(pr4)
+    projects.push(pr5)
 
     return projects
     
