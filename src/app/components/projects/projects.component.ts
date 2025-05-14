@@ -156,6 +156,7 @@ export class ProjectsComponent {
       description: 'Aplicativo mobile desenvolvido para o controle de glicemia utilizando Xamarin/MAUI',
       links: [
           new ProjectLink('GitHub', 'https://github.com/DiegoMaia83/AppControleGlicemia'),
+          new ProjectLink('Download', '/assets/downloads/app/br.com.devmaia.appcontroleglicemia.apk')
       ],
       categories: [ 'Xamarin', 'C#' ],
       filters: ['Mobile'],
@@ -183,6 +184,8 @@ export class ProjectsComponent {
         return 'fas fa-globe';
       case 'api':
         return 'fas fa-sitemap'
+      case 'download':
+        return 'fas fa-download';
       default:
         return 'fas fa-link'; 
     }

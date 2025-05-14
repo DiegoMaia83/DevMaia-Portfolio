@@ -36,11 +36,14 @@
                         <div class="dm-project-description">
                             {{ project.description }}
                         </div>
-                    </div>
+                    </div>                    
     
                     <div class="dm-project-links">
                         <div class="dm-project-link" *ngFor="let link of project.links">
-                            <a (click)="abrirLink(link.url)">
+                            <a (click)="abrirLink(link.url)" *ngIf="link.type !== 'Download'">
+                              <i [class]="getIcon(link.type)"></i> {{ link.type }}
+                            </a>
+                            <a (click)="abrirLink(link.url)" *ngIf="link.type === 'Download'" download>
                               <i [class]="getIcon(link.type)"></i> {{ link.type }}
                             </a>
                         </div>
